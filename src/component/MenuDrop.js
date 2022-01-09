@@ -3,7 +3,7 @@ import "./MenuDrop.css";
 import Icon from "./Icon.js";
 
 /*
-  В родительском компаненте создаём объект типа [link, title]
+  В родительском компоненте создаём объект типа [link, title]
   и передаём его в компонент MenuDrop
 */
 
@@ -34,16 +34,15 @@ const MenuList = prop => {
       }
     </ul>
   )
-}
-
-    
+};
     
 /**
- * This function create a component of button with a drop down list
- * iconID: string, 
- * titleButton type: string, type: <ArrayOfObject>, type: string|number )</ArrayOfObject>
- * @param {string} iconID -  
- * @returns 
+ * This function create a component of button with a drop down list.
+ * @function MenuDrop
+ * @param {string} iconID - Identity SVG name within a sprite file.
+ * @param {string} titleButton - If a icon of SVG don't define then use title for button.
+ * @param {Object[]} menuList - List categories of menu.
+ * @param {string|number} menuListID - Identity menu element.
  */
 const MenuDrop = prop => {
   const { iconID, titleButton, menuList, menuListID } = prop;
