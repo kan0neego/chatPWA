@@ -5,7 +5,7 @@ import Icon from "./Icon.js";
 /*
   В родительском компаненте создаём объект типа [link, title]
   и передаём его в компонент MenuDrop
-*/ 
+*/
 
 const MenuList = prop => {
   const { list, id } = prop;
