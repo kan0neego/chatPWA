@@ -1,10 +1,10 @@
 const importAll = response => {
   const images = {};
+  console.log(response);
   response.keys()
-    .forEach((item, index) => { 
-      const regExp = item.replace(/\.\/|\.(png|jpe?g|webp)/, '')
-      console.log(regExp);
-      images[regExp] = response(item); 
+    .forEach(item => { 
+      const regEx = item.replace(/\.\/|\.(png|jpe?g|webp)/, '')
+      images[regEx] = response(item); 
     });
  return images;
 }
