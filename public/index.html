@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta name="text/html" charset="utf-8" http-equiv="Content-Type">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <meta name="description" content="Web site created using create-react-app">
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
+    <meta name='text/html' charset='utf-8' http-equiv='Content-Type'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta name='theme-color' content='#000000'>
+    <meta name='description' content='Web site created using create-react-app'>
+    <link rel='icon' href='%PUBLIC_URL%/favicon.ico'>
     <title>Chat Desktop App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
-      <div class="wrapperGrid">
-        <section class="navigation" id="navigationBlock"></section>
-        <section class="main" id="mainBlock"></section>
-        <section class="profile" id="profileBlock"></section>
-      </div>
+    <div id='root'>
+      <section class='navigation'>
+        <div class='navigation_setting'></div>
+        <div class='navigation_treads'></div>
+        <div class='navigation_channels'></div>
+        <div class='navigation_friends'></div>
+      </section>
+      <section class='main'>
+        <header class='main_header'></header>
+        <section class='main_messages-list'>
+          <div class='main_messages-list_message'></div>
+          <div class='main_messages-list_input'></div>
+        </section>
+      </section>
+      <section class='profile'></section>
     </div>
   </body>
 </html>
