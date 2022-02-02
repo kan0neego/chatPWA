@@ -27,7 +27,7 @@ body {
   background-size: cover;
 }
 
-.wrapperGrid {
+#root {
   display: grid;
   grid-template-columns: 261.5px minmax(567px, 1fr) 201px;
 }
@@ -136,6 +136,7 @@ body {
   padding-left: 1.785em;
   padding-right: 1.785em;
 }
+
 .main_header input {
   width: 251px;
   height: 33px;
@@ -147,6 +148,7 @@ body {
   background: url("assets/svg/search.svg") no-repeat center;
   background-position-x: 94%;
 }
+
 .main_header input:focus {
   background: none;
 }
@@ -155,20 +157,26 @@ body {
   display: flex;
   align-items: center;
 }
+
 .main_header_panel p {
   text-align: center;
 }
 
-.iconPeople {
-  margin-right: 6px;
+.main_messages-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.iconBell {
-  margin-left: 25px;
+.main_messages-list_message {
+  width: 100%;
+  height: 100%;
 }
 
-.iconMenu {
-  margin-left: 25px;
+.main_messages-list_input {
+  width: 100%;
+  height: 60px;
+  border: 1px, solid, #000000;
 }
 
 .profile {
@@ -177,13 +185,14 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.profile_user_information {
+.profile_information {
   padding-top: 14px;
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 28px;
 }
-.profile_user_information p {
+
+.profile_information p {
   color: #5F6164;
 }
 
@@ -203,14 +212,14 @@ body {
   border-radius: 50%;
   background-color: #E8E8EB;
 }
-.shape img {
+.shape svg {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.profile_buttonPanel {
+.profile_menu {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -229,23 +238,11 @@ button[type=button] {
   cursor: pointer;
 }
 
-/* Изменить способ встраивания svg в компонент */
-
-/* button[type=menu]::before {
-  display: "block";
-  width: 12px;
-  height: 8px;
-  position: absolute;
-  top: 34%;
-  right: 38.5%;
-  content: url("assets/svg/arrowDown.svg");
-} */
-
-.profile_user_contact {
+.profile_contact {
   padding-top: 14px;
   line-height: 1.3;
 }
-.profile_user_contact p:nth-child(even) {
+.profile_contact p:nth-child(even) {
   padding-bottom: 11px;
   color: #000000;
 }

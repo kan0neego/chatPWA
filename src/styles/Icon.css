@@ -1,0 +1,53 @@
+.svg-balloon-dims {
+	width: 16px;
+	height: 17px;
+}
+
+.svg-setting-dims {
+	width: 14px;
+	height: 15px;
+}
+
+.svg-shape-dims {
+	width: 6px;
+	height: 6px;
+}
+
+.svg-iconPeople-dims {
+	width: 10px;
+	height: 14px;
+	margin-right: 6px;
+}
+
+.svg-iconBell-dims {
+	width: 14px;
+	height: 14px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.svg-iconMenu-dims {
+	width: 6px;
+	height: 17px;
+}
+
+.svg-facebook-dims {
+	width: 6px;
+	height: 12px;
+}
+
+.svg-twitter-dims {
+   width: 13px;
+   height: 10px;
+}
+
+.svg-instagramm-dims {
+   width: 12px;
+   height: 13px;
+}
+
+.svg-in-dims {
+   width: 12px;
+   height: 12px;
+}
+

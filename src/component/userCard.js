@@ -1,7 +1,7 @@
-import { useLayoutEffect, useState, useRef } from 'react';
+import '../styles/userCard.css';
 import Icon from './Icon.js';
 import images from '../assets/images/imageAll';
-import './userCard.css';
+import { useLayoutEffect, useState, useRef } from 'react';
 
 /**
  * This function create a component of user's card
