@@ -1,18 +1,20 @@
 import { useState, useEffect, useRef } from "react";
-import "./MenuDrop.css";
 import Icon from "./Icon.js";
+import "../styles/MenuDrop.css";
 
 /**
  * This function create a component of button with a dropdown list.
- * @function MenuDrop
  * @param {string} iconID - Identity SVG name within a sprite file.
  * @param {string} titleButton - If a icon of SVG don't define then use title for button.
  * @param {Object[]} menuList - List categories of menu.
  * @param {string|number} menuListID - Identity menu element.
+ * @param {Object<type|string>} buttonStyle - Overlap to style set for button.
+ * @param {Object<type|string>} iconStyle - Overlap to style set for SVG.
  */
+
 const MenuDrop = prop => {
-  const { iconID, titleButton, menuList, menuListID } = prop;
-  const [ appearanse, setState ] = useState(false)
+  const { iconID, titleButton, menuList, menuListID, buttonStyle, iconStyle } = prop;
+  const [ appearanse, setState ] = useState(false);
   const handleClick = () => {
     const menuListNode = document.getElementById(menuListID);
     if (appearanse !== true) {
@@ -22,14 +24,21 @@ const MenuDrop = prop => {
       menuListNode.classList.add("menu_menuList--disabled");
       setState(false);
     }
+    window.addEventListener('click', mouseClick => {
+      const target = mouseClick.target;
+      if (!target.closest('.menu') && !target.closest('.menu_button')) {
+        menuListNode.classList.add("menu_menuList--disabled");
+        setState(false);
+      };
+    })
   }
 
   return (
     <div className="menu">
-      <button className="menu_button" type="menu" onClick={handleClick} >
+      <button className="menu_button" style={buttonStyle} type="menu" onClick={handleClick} >
         {
           iconID && 
-            <Icon id={iconID} />
+            <Icon id={iconID} style={iconStyle} />
         }
         {titleButton}
       </button>
