@@ -11,6 +11,7 @@
 
 # configuration
 config-sprite.json
+.vscode
 
 # misc
 .DS_Store

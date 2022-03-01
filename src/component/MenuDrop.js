@@ -1,3 +1,5 @@
+// TODO: Переписать все компоненты используя библиотеку styled-component
+
 import { useState, useEffect, useRef } from "react";
 import Icon from "./Icon.js";
 import "../styles/MenuDrop.css";
@@ -50,6 +52,14 @@ const MenuDrop = prop => {
 const MenuList = prop => {
   const { list, id } = prop;
   const targetRef = useRef();
+  const listItem = list.map((element, index) => {
+    return (
+    <li key={index} id={`dropdown_item-${index}`}>
+      <a href={element.index}>{element.title}</a>
+    </li>
+    )
+  })
+
   useEffect(() => {
     if (targetRef.current) {
       const childNodes = targetRef.current.childNodes;
@@ -63,15 +73,7 @@ const MenuList = prop => {
 
   return (
     <ul className="menu_menuList menu_menuList--disabled" id={id} ref={targetRef}>
-      {
-        list.map((element, index) => {
-          return (
-             <li key={index} id={`dropdown_item-${index}`}>
-              <a href={element.link}>{element.title}</a>
-            </li>
-          )
-        })
-      }
+      {listItem}
     </ul>
   )
 };

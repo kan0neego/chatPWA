@@ -24,6 +24,10 @@
   position: relative;
 }
 
+.navigation_friend_list_card_avatar > img {
+  border-radius: 20%;
+}
+
 .border {
   position: absolute;
   top: 50%;
@@ -42,4 +46,5 @@
    white-space: nowrap;
    text-overflow: ellipsis;
    margin-left: 0.821em;
+   color: rgba(181, 181, 181, 1);
 }

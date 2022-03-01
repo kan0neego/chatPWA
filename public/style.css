@@ -1,0 +1,49 @@
+@font-face {
+  font-family: Lato;
+  src: url("../src/assets/fonts/lato/Lato-Regular.ttf") format("ttf");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+  min-height: 100vh;
+  line-height: 1.5em;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  list-style-type: none;
+  margin: 0;
+}
+
+img, input[type=image], video, rembed, iframe, marquee, object, table {
+  display: block;
+  aspect-ratio: attr(width)/attr(height);
+}

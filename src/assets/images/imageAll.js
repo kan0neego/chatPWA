@@ -7,6 +7,7 @@ const importAll = response => {
     });
  return images;
 }
-const images = importAll(require.context('/', false, /\.(png|jpe?g|webp)$/));
+const images = importAll(require.context('/', false, /\.(png|jpe?g|webp|svg)$/));
+const svg = importAll(require.context('../svg', false, /\.(svg)$/));
 
-export default images;
+export { images, svg };
